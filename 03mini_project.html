@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Profile</title>
+    <style>
+        .social img{
+            width:35px;
+            margin: 10px;
+            transition: 0.3s;
+
+        }
+
+        .social img:hover {
+            transform: scale(1.3);
+            filter: brightness(1.2);
+
+
+        }
+
+        .social:hover img{
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: 50%;
+        }
+
+        .contact {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 15px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .contact:hover{
+            background-color: #3e7d32;
+            transform: scale(1.1);
+        }
+
+
+        #video  {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width:100vw;
+        height:100vh;
+        object-fit: cover;
+        z-index: -2;
+    }
+    #overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
+
+
+
+}
+
+    </style>
+    
+</head>
+
+
+<body style="font-family: Arial, Helvetica, sans-serif;text-align: center;">
+
+    <div style="
+    background-color: rgba(255,255,255,0.04); 
+    width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 18px; 
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255,255,255,0.3);
+    color: BLACK;
+    font-weight: 500;
+    ">
+
+    
+
+        <img src="profile.jpeg" width="150"
+            style="border-radius: 50%; border: 4px solid rgba(255,255,255,0.7); box-shadow: 0 0 20px
+            rgba(255,255,255,0.35);">
+
+        <h2 style="color: BLACK;">Bishal Ray</h2>
+
+        <p style="color: BLACK;">I am learinig HTML and building a project</p>
+
+        <h3>MY Skills</h3>
+        <ul style="list-style-type: none; padding: 0; line-height: 1.5; text-align: center;">
+            <li>HTML</li>
+            <li>Learning CSS</li>
+            <li>Basic Programming</li>
+            <li>C Programming completed</li>
+        </ul>
+        <h3>My hobbies</h3>
+        <ul style="list-style-type: none; padding: 0; line-height: 1.5; text-align: center;">
+            <li>Coding</li>
+            <li>Gaming</li>
+            <li>Music</li>
+        </ul>
+
+        
+
+        <p id="contactInfo" style="display: none; margin-top: 15px;text-align: center;">
+            <a href="mailto:raybishal028@gmail.com"
+            class="contact">
+            📧 Email</a><br>
+            <a href="tel:9065070962" class="contact">
+            📞 call
+            </a>
+
+        </p>
+
+        <button onclick="toggleContact()"
+            style="background-color: green;color: white;padding: 10px;border: none;border-radius: 5px;cursor: pointer;">
+            Contact Me
+        </button>
+
+       
+        <button onclick="toggleSocial()"
+        style="background-color: purple; color: white;padding: 10px; border: none; border-radius: 8px;margin-top: 10px; cursor: pointer;">
+    Social media
+    </button>
+    <p id="socialInfo" style="display: none;margin-top: 15px;text-align: center;">
+        <a href="https://www.facebook.com/share/1aS9nzMQaf/"
+        target="_blank" class="social">
+    <img
+       src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="35"></a>
+
+        <a href="https://www.instagram.com/yadavbishal5555?igsh=MXYzaGw2dXRsejRncQ=="
+        target="_blank" class="social">
+    <img
+        src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="35"></a>
+
+        <a href="https://www.tiktok.com/@bishalray028?_r=1&_t=ZS-95BPMcyQOMj"
+        target="_blank" class="social">
+    <img
+         src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" width="35"></a>
+
+        <a href="https://github.com/yaalok253"
+        target="_blank" class="social"> 
+    <img
+         src="https://cdn-icons-png.flaticon.com/512/733/733553.png" width="35">"</a>
+
+    </p>
+    </div>
+
+    <script>
+        function toggleContact() {
+            let contact =
+            document.getElementById("contactInfo");
+
+            if (contact.style.display=="none"){
+                contact.style.display="block";
+
+            }
+            else{
+                contact.style.display="none";
+
+            }
+            
+        }
+
+        function toggleSocial() {
+            let social =
+            document.getElementById("socialInfo");
+
+            if(social.style.display=="none"){
+                social.style.display="block";
+
+            }
+            else{
+                social.style.display ="none";
+            }
+        }
+    </script>
+
+    <video autoplay muted loop id="video">
+        <source src="yourvideo.mp4"type="video/mp4">
+    </video>
+    
+</body>
+
+
+</html>
